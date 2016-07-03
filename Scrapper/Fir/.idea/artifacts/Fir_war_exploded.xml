@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Fir:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Fir_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Fir/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Fir" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jsoup-1.9.2" />
+          <element id="library" level="project" name="jdbc" />
+          <element id="library" level="project" name="java-json" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
