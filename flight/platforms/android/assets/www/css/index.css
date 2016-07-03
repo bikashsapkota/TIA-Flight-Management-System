@@ -125,3 +125,16 @@ td,th {
 }
 
 tbody tr:nth-child(even)  td { background-color: #eee; }
+
+
+
+#weather{
+    width: 40%;
+    height: 70%;
+    border: 3px solid #73AD21;
+}
+
+#flightDetails{
+    width: 60%;
+    height: 70%;
+}

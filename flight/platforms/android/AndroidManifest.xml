@@ -11,15 +11,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <amazon:enable-feature android:name="com.amazon.device.messaging" android:required="false" xmlns:amazon="http://schemas.amazon.com/apk/res/android" />
-        <service android:exported="false" android:name="com.onesignal.ADMMessageHandler" />
-        <receiver android:name="com.onesignal.ADMMessageHandler$Receiver" android:permission="com.amazon.device.messaging.permission.SEND">
-            <intent-filter>
-                <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
-                <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
-                <category android:name="com.example.hello" />
-            </intent-filter>
-        </receiver>
+        <service android:name="de.appplant.cordova.plugin.background.ForegroundService" />
     </application>
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22" />
 </manifest>

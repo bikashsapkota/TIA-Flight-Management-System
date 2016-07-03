@@ -1,18 +1,48 @@
 <html>
-    <head>
-        <title>Flight </title>
-        <link rel="stylesheet" href="css/jquery.mobile-1.0.min.css" />
-        <link rel="stylesheet" href="css/index.css" />
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-        <script type="text/javascript" src="js/jquery.mobile-1.0.min.js"></script>
-        <script>app.initialize()</script>
-        <script>getWeather()</script>
-    </head>
+<head>
+    <title>Flight </title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        tr {
+            border-bottom: 1px solid lightgray;
+        }
+    </style>
+    <link rel="stylesheet" href="css/jquery.mobile-1.0.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.0.min.js"></script>
+    <script>//app.initialize()</script>
+    <script>getWeather();</script>
+    <script>
+        $(document).ready(function(){
+            var flight= localStorage.getItem('flight');
+            $('#t1 tr td').each(function(){
+                if ($(this).text() == flight) {
+                    $(this).parent().css('background-color','#00FF00');
+                }
+            });
+        });
+    </script>
+    <script>getplaneDetails();</script>
+</head>
 
 
-    <body>
-    test
-    </body>
+<body>
+<form id="form">
+
+        FlightName:<input id="planeNo" />
+        <button id="subscribe" onclick="setLocal()"> RemindMe</button>
+</form>
+</div>
+<div id="header"></div>
+<div id="weather"></div>
+
+    <table id="t1" class="ui-responsive ui-shadow"><tr><th>Flight Name</th><th>ETA</th><th>STA</th><th>ORIGIN</th></tr></table>
+
+<div id="footer"></div>
+</body>
 
 </html>

@@ -4,15 +4,36 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"browser-package\" value=\"Device\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.example.hello"
         },
-        "onesignal-cordova-plugin": {
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-background-task": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "com.example.hello"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.example.hello"
+        }
+    }
 }

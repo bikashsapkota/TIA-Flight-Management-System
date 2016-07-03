@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>table View</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head>
+
+<body>
+    <script>
+	$.ajax({
+        type: "GET",
+        url: "https://myphpapp-hajurkoaaja.rhcloud.com/api.php",
+        data: "class=5A&duedate=mar",
+	dataType: 'json',
+        success: function(data){
+		$.each(data, function(index, element) {     		
+                	console.log(element.subject)
+        });
+        }
+    });
+    </script>
+</body>
+</html>
+

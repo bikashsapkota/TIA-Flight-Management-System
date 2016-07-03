@@ -9,7 +9,19 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"OneSignalPush\"><param name=\"android-package\" value=\"com.plugin.gcm.OneSignalPush\" /></feature>",
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BackgroundMode\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.background.BackgroundMode\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"KeepRunning\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -19,15 +31,7 @@
                 "parents": {
                     "/manifest/application": [
                         {
-                            "xml": "<amazon:enable-feature android:name=\"com.amazon.device.messaging\" android:required=\"false\" xmlns:amazon=\"http://schemas.amazon.com/apk/res/android\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<service android:exported=\"false\" android:name=\"com.onesignal.ADMMessageHandler\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<receiver android:name=\"com.onesignal.ADMMessageHandler$Receiver\" android:permission=\"com.amazon.device.messaging.permission.SEND\"><intent-filter><action android:name=\"com.amazon.device.messaging.intent.REGISTRATION\" /><action android:name=\"com.amazon.device.messaging.intent.RECEIVE\" /><category android:name=\"com.example.hello\" /></intent-filter></receiver>",
+                            "xml": "<service android:name=\"de.appplant.cordova.plugin.background.ForegroundService\" />",
                             "count": 1
                         }
                     ]
@@ -39,9 +43,19 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.example.hello"
         },
-        "onesignal-cordova-plugin": {
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-background-task": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "com.example.hello"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.example.hello"
+        }
+    }
 }

@@ -7,10 +7,30 @@
         "is_top_level": true,
         "variables": {}
     },
-    "onesignal-cordova-plugin": {
+    "cordova-plugin-background-mode": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/katzer/cordova-plugin-background-mode.git",
+            "subdir": "."
+        }
+    },
+    "cordova-plugin-device": {
         "source": {
             "type": "registry",
-            "id": "onesignal-cordova-plugin"
+            "id": "cordova-plugin-device"
+        }
+    },
+    "cordova-plugin-background-task": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/leecrossley/cordova-plugin-background-task.git",
+            "subdir": "."
+        }
+    },
+    "cordova-plugin-dialogs": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-dialogs"
         }
     }
 }
